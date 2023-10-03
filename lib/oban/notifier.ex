@@ -224,8 +224,6 @@ defmodule Oban.Notifier do
     payload
     |> to_encodable()
     |> Jason.encode!()
-    |> :zlib.gzip()
-    |> Base.encode64()
   end
 
   defp decode(payload) do
